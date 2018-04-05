@@ -43,7 +43,7 @@ describe('getProperty', () => {
   });
 });
 
-describe('hasProperty', () => {
+/*describe('hasProperty', () => {
   const fred = {
     name: 'Fred',
     age: 79,
@@ -51,6 +51,17 @@ describe('hasProperty', () => {
 
   expect(hasProperty('age', fred)).toBe(true);
   expect(hasProperty('favouriteColour', fred)).toBe(false);
+});*/
+
+describe('hasProperty', () => {
+  it ('checks whether object has given property', () => { 
+    const fred = {
+    name: 'Fred',
+    age: 79,
+  };
+  expect(hasProperty('age', fred)).toBe(true);  
+  expect(hasProperty('favouriteColour', fred)).toBe(false);
+  });
 });
 
 describe('isOver65', () => {

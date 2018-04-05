@@ -4,15 +4,11 @@ export const createPerson = (name, age) => {
     name: name,
     age: age
   };
-
   return (person);
-
 };
 
 export const getName = (object) => {
-  // returns the name property of the object
-  return(object["name"]);
-
+  return(object['name']);
 };
 
 export const getProperty = (property, object) => {
@@ -26,11 +22,7 @@ export const hasProperty = (property, object) => {
 
 export const isOver65 = (person) => {
   // returns true if the person is aged over 65
-  if (person['age'] > 65) {
-    return true;
-  } else {
-    return false;
-  }
+  return person.age > 65
 };
 
 export const getAges = (people) => {
@@ -39,29 +31,22 @@ export const getAges = (people) => {
 };
 
 export const findByName = (name, people) => {
-  // your code here
   return people.find(person => person.name === name);
 };
 
 export const findHondas = (cars) => {
-  // your code here
   return cars.filter(car => car.manufacturer === 'Honda');
 };
 
 export const averageAge = (people) => {
-
   // call function ^ up there to get ages
-  let peopleAges = getAges(people);
-  //console.log(peopleAges);
+  const peopleAges = getAges(people);
 
-  // very tenuous grasp of reduce...sums them up? What have I even done here?
   return peopleAges.reduce((total, age) => total + age) / people.length;
-
 };
 
 export const createTalkingPerson = (name, age) => {
   // returns a person who can introduce themselves
-  // not sure if this is right? Should I be hardcoding Fred in there?
   return {
     name: name,
     age: age,

@@ -39,9 +39,7 @@ export const numbersToStrings = (numbers) => {
 };
 
 export const uppercaseWordsInArray = (strings) => {
-  
   strings = strings.map(v => v.toUpperCase());
-
   return strings;
 };
 
@@ -68,8 +66,6 @@ export const removeNthElement2 = (index, array) => {
 
 export const elementsStartingWithAVowel = (strings) => {
   // returns elements starting with a vowel & is case insensitive
-
-  // create array
   const startsWithVowel = [];
 
   for (let i = 0; i < strings.length; i++){
@@ -78,7 +74,6 @@ export const elementsStartingWithAVowel = (strings) => {
       // add to array
       startsWithVowel.push(strings[i])
     };
-
   }    
   return startsWithVowel; 
 };
@@ -94,8 +89,6 @@ export const sumNumbers = (numbers) => {
 };
 
 export const sortByLastLetter = (strings) => {
-  // sorts the string by the last character
-
   // use the charCodeAt property, which returns a number associated with a character. Letters that occur later in the alphabet have a higher value
   return strings.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
   

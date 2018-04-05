@@ -23,7 +23,7 @@ export const truthiness = (a) => {
 };
 
 export const isEqual = (a, b) => {
-  return a == b;
+  return a === b;
 };
 
 export const isGreaterThan = (a, b) => {
@@ -35,12 +35,12 @@ export const isLessThanOrEqualTo = (a, b) => {
 };
 
 export const isOdd = (a) => {
-  return a % 2 == !0;
+  return a % 2 !== 0;
 };
 
 export const isEven = (a) => {
   // modulus operator % finds the remainder of division. If there is no remainder after division by 2, a number is even
-  return a % 2 == 0;
+  return a % 2 === 0;
 };
 
 export const isSquare = (a) => {
@@ -57,8 +57,8 @@ export const containsVowels = (string) => {
      i makes it case-insensitive) and returns true if the string contains vowels. 
      We check for null incase there are no matches (ie no vowels), and return false in that case.
   */
-  var m = string.match(/[aeiou]/gi);
-  return m === null ? false : true;
+  const hasVowels = string.match(/[aeiou]/gi);
+  return hasVowels === null ? false : true;
 };
 
 export const isLowerCase = (string) => {
